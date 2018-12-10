@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configuration>
+    <servers/>
+    <playerCommands>
+        <playerCommand>
+            <name>Ban</name>
+            <format>glist ban $TARGET_NAME</format>
+        </playerCommand>
+        <playerCommand>
+            <name>Toggle Mute</name>
+            <format>mute $TARGET_NAME</format>
+        </playerCommand>
+        <playerCommand>
+            <name>Kick</name>
+            <format>tempban $TARGET_NAME 10s Kicked</format>
+        </playerCommand>
+        <playerCommand>
+            <name>Tempban 5m + Reason</name>
+            <format>tempban $TARGET_NAME 5m $REASON</format>
+        </playerCommand>
+        <playerCommand>
+            <name>Tempban 5m</name>
+            <format>tempban $TARGET_NAME 5m</format>
+        </playerCommand>
+        <playerCommand>
+            <name>Smite</name>
+            <format>smite $TARGET_NAME</format>
+        </playerCommand>
+        <playerCommand>
+            <name>Op</name>
+            <format>op $TARGET_NAME</format>
+        </playerCommand>
+        <playerCommand>
+            <name>Deop</name>
+            <format>deop $TARGET_NAME</format>
+        </playerCommand>
+        <playerCommand>
+            <name>GTFO + Reason</name>
+            <format>gtfo $TARGET_NAME $REASON</format>
+        </playerCommand>
+        <playerCommand>
+            <name>GTFO</name>
+            <format>gtfo $TARGET_NAME</format>
+        </playerCommand>
+        <playerCommand>
+            <name>Toggle Freeze</name>
+            <format>fr $TARGET_NAME</format>
+        </playerCommand>
+        <playerCommand>
+            <name>Cage</name>
+            <format>cage $TARGET_NAME</format>
+        </playerCommand>
+        <playerCommand>
+            <name>Uncage</name>
+            <format>cage $TARGET_NAME off</format>
+        </playerCommand>
+        <playerCommand>
+            <name>Doom</name>
+            <format>doom $TARGET_NAME</format>
+        </playerCommand>
+        <playerCommand>
+            <name>Creative</name>
+            <format>creative $TARGET_NAME</format>
+        </playerCommand>
+        <playerCommand>
+            <name>Survival</name>
+            <format>survival $TARGET_NAME</format>
+        </playerCommand>
+        <playerCommand>
+            <name>Seen Name</name>
+            <format>seen $TARGET_NAME</format>
+        </playerCommand>
+        <playerCommand>
+            <name>Seen IP</name>
+            <format>seen $TARGET_IP</format>
+        </playerCommand>
+        <playerCommand>
+            <name>Clear Nickname</name>
+            <format>nick $TARGET_NAME off</format>
+        </playerCommand>
+    </playerCommands>
+    <favoriteButtons>
+        <favoriteButton>
+            <command>opall</command>
+            <label>Op All</label>
+        </favoriteButton>
+        <favoriteButton>
+            <command>deopall</command>
+            <label>Deop All</label>
+        </favoriteButton>
+        <favoriteButton>
+            <command>nickclean</command>
+            <label>Nick Clean</label>
+        </favoriteButton>
+        <favoriteButton>
+            <command>adminmode on</command>
+            <label>Adminmode ON</label>
+        </favoriteButton>
+        <favoriteButton>
+            <command>adminmode off</command>
+            <label>Adminmode OFF</label>
+        </favoriteButton>
+        <favoriteButton>
+            <command>cake</command>
+            <label>Cake</label>
+        </favoriteButton>
+        <favoriteButton>
+            <command>mp</command>
+            <label>Mob Purge</label>
+        </favoriteButton>
+        <favoriteButton>
+            <command>rd</command>
+            <label>Remove Drops</label>
+        </favoriteButton>
+        <favoriteButton>
+            <command>purgeall</command>
+            <label>Purge All</label>
+        </favoriteButton>
+        <favoriteButton>
+            <command>setl</command>
+            <label>Set Limit = 500</label>
+        </favoriteButton>
+        <favoriteButton>
+            <command>stop</command>
+            <label>Stop Server</label>
+        </favoriteButton>
+        <favoriteButton>
+            <command>toggle waterplace</command>
+            <label>Toggle Water Placement</label>
+        </favoriteButton>
+        <favoriteButton>
+            <command>toggle fireplace</command>
+            <label>Toggle Fire Placement</label>
+        </favoriteButton>
+        <favoriteButton>
+            <command>toggle lavaplace</command>
+            <label>Toggle Lava Placement</label>
+        </favoriteButton>
+        <favoriteButton>
+            <command>toggle fluidspread</command>
+            <label>Toggle Fluid Spread</label>
+        </favoriteButton>
+        <favoriteButton>
+            <command>toggle lavadmg</command>
+            <label>Toggle Lava Damage</label>
+        </favoriteButton>
+        <favoriteButton>
+            <command>toggle firespread</command>
+            <label>Toggle Fire Spread</label>
+        </favoriteButton>
+        <favoriteButton>
+            <command>toggle lockdown</command>
+            <label>Toggle Lockdown</label>
+        </favoriteButton>
+        <favoriteButton>
+            <command>toggle explosives</command>
+            <label>Toggle Explosives</label>
+        </favoriteButton>
+    </favoriteButtons>
+</configuration>
