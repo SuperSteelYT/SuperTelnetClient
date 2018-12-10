@@ -28,7 +28,7 @@ public class BTC_ConsoleMessage
     public BTC_ConsoleMessage(final String message)
     {
         this.message = message;
-        this.color = Color.BLACK;
+        this.color = Color.WHITE;
     }
 
     public BTC_ConsoleMessage(final String message, final Color color)

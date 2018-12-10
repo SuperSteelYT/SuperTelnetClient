@@ -80,81 +80,73 @@
         </playerCommand>
     </playerCommands>
     <favoriteButtons>
-        <favoriteButton>
-            <label>Op All</label>
-            <command>opall</command>
-        </favoriteButton>
-        <favoriteButton>
-            <label>Deop All</label>
-            <command>deopall</command>
-        </favoriteButton>
-        <favoriteButton>
-            <label>Nick Clean</label>
-            <command>nickclean</command>
-        </favoriteButton>
-        <favoriteButton>
-            <label>Adminmode ON</label>
-            <command>adminmode on</command>
-        </favoriteButton>
-        <favoriteButton>
-            <label>Adminmode OFF</label>
-            <command>adminmode off</command>
-        </favoriteButton>
-        <favoriteButton>
-            <label>Cake</label>
-            <command>cake</command>
-        </favoriteButton>
-        <favoriteButton>
-            <label>Mob Purge</label>
-            <command>mp</command>
-        </favoriteButton>
-        <favoriteButton>
-            <label>Remove Drops</label>
-            <command>rd</command>
-        </favoriteButton>
-        <favoriteButton>
-            <label>Purge All</label>
-            <command>purgeall</command>
-        </favoriteButton>
-        <favoriteButton>
-            <label>Set Limit = 500</label>
-            <command>setl</command>
-        </favoriteButton>
-        <favoriteButton>
-            <label>Stop Server</label>
-            <command>stop</command>
-        </favoriteButton>
-        <favoriteButton>
-            <label>Toggle Water Placement</label>
-            <command>toggle waterplace</command>
-        </favoriteButton>
-        <favoriteButton>
-            <label>Toggle Fire Placement</label>
-            <command>toggle fireplace</command>
-        </favoriteButton>
-        <favoriteButton>
-            <label>Toggle Lava Placement</label>
-            <command>toggle lavaplace</command>
-        </favoriteButton>
-        <favoriteButton>
-            <label>Toggle Fluid Spread</label>
-            <command>toggle fluidspread</command>
-        </favoriteButton>
-        <favoriteButton>
-            <label>Toggle Lava Damage</label>
-            <command>toggle lavadmg</command>
-        </favoriteButton>
-        <favoriteButton>
-            <label>Toggle Fire Spread</label>
-            <command>toggle firespread</command>
-        </favoriteButton>
-        <favoriteButton>
-            <label>Toggle Lockdown</label>
-            <command>toggle lockdown</command>
-        </favoriteButton>
-        <favoriteButton>
-            <label>Toggle Explosives</label>
-            <command>toggle explosives</command>
-        </favoriteButton>
+       <favoriteButton>
+           <label>Op All</label>
+           <command>opall</command>
+       </favoriteButton>
+       <favoriteButton>
+           <label>De-Op All</label>
+           <command>deopall</command>
+       </favoriteButton>
+       <favoriteButton>
+           <label>Cake</label>
+           <command>cake</command>
+       </favoriteButton>
+       <favoriteButton>
+           <label>Cookie</label>
+           <command>cookie</command>
+       </favoriteButton>
+       <favoriteButton>
+           <label>Entity Wipe</label>
+           <command>ew</command>
+       </favoriteButton>
+       <favoriteButton>
+           <label>Mob Purge</label>
+           <command>mp</command>
+       </favoriteButton>
+       <favoriteButton>
+           <label>Potion Clear</label>
+           <command>potion clearall</command>
+       </favoriteButton>
+       <favoriteButton>
+           <label>Undisguise All</label>
+           <command>uall</command>
+       </favoriteButton>
+       <favoriteButton>
+           <label>Clean Nicks</label>
+           <command>nc</command>
+       </favoriteButton>
+       <favoriteButton>
+           <label>Global Freeze</label>
+           <command>freeze</command>
+       </favoriteButton>
+       <favoriteButton>
+           <label>AdminMode On</label>
+           <command>adminmode on</command>
+       </favoriteButton>
+       <favoriteButton>
+           <label>AdminMode Off</label>
+           <command>adminmode off</command>
+       </favoriteButton>
+       <favoriteButton>
+           <label>Fluid Spread</label>
+           <command>toggle fluidspread</command>
+       </favoriteButton>
+       <favoriteButton>
+           <label>Place Water</label>
+           <command>toggle waterplace</command>
+       </favoriteButton>
+       <favoriteButton>
+           <label>Place Lava</label>
+           <command>toggle lavaplace</command>
+       </favoriteButton>
+       <favoriteButton>
+           <label>Fire Spread</label>
+           <command>toggle firespread</command>
+       </favoriteButton>
+       <favoriteButton>
+           <label>Explosives</label>
+           <command>toggle explosives</command>
+       </favoriteButton>
     </favoriteButtons>
 </configuration>

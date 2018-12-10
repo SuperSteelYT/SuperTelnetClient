@@ -24,8 +24,9 @@ import java.util.regex.Pattern;
 public class BTC_TelnetMessage extends BTC_ConsoleMessage
 {
     private static final String PATTERN_PREFIX = "^:\\[.+? INFO\\]: ";
-    private static final Color PURPLE = new Color(56, 39, 55);
+    private static final Color PURPLE = new Color(204, 116, 198);
     private static final Color DARK_GREEN = new Color(86, 130, 3);
+    private static final Color RED = new Color(204, 116, 116);
 
     private static final Pattern ERROR_MESSAGE = Pattern.compile("^:\\[.+? (?:(WARN)|(ERROR))\\]: ");
     private static final Pattern INFO_MESSAGE = Pattern.compile(PATTERN_PREFIX);
@@ -120,12 +121,12 @@ public class BTC_TelnetMessage extends BTC_ConsoleMessage
         //
         ADMINSAY_MESSAGE(PATTERN_PREFIX + "\\[TotalFreedomMod\\] \\[ADMIN\\] ", PURPLE),
         //
-        WORLD_EDIT(PATTERN_PREFIX + "WorldEdit: ", Color.RED),
+        WORLD_EDIT(PATTERN_PREFIX + "WorldEdit: ", RED),
         //
         PREPROCESS_COMMAND(PATTERN_PREFIX + "\\[PREPROCESS_COMMAND\\] ", DARK_GREEN),
         //
-        ISSUED_SERVER_COMMAND(PATTERN_PREFIX + ".+? issued server command: "),
-        PLAYER_COMMAND(PATTERN_PREFIX + "\\[PLAYER_COMMAND\\] ");
+        ISSUED_SERVER_COMMAND(PATTERN_PREFIX + ".+? issued server command: ", Color.WHITE),
+        PLAYER_COMMAND(PATTERN_PREFIX + "\\[PLAYER_COMMAND\\] ", Color.WHITE);
 
         private final Pattern messagePattern;
         private final Color color;

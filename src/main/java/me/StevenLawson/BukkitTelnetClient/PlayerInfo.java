@@ -96,7 +96,7 @@ public class PlayerInfo
         return name;
     }
 
-    @PlayerTableColumn(name = "IP", column = 1)
+    @PlayerTableColumn(name = "IP", column = 4)
     public String getIp()
     {
         return ip;
@@ -139,25 +139,25 @@ public class PlayerInfo
         return nickName == null || nickName.isEmpty() || nickName.equalsIgnoreCase("null") ? "" : nickName;
     }
 
-    @PlayerTableColumn(name = "Admin Level", column = 4)
+    @PlayerTableColumn(name = "Rank", column = 1)
     public String getAdminLevel()
     {
         if (isAdmin())
         {
             if (isSeniorAdmin())
             {
-                return "Senior";
+                return "SrA";
             }
             else if (isTelnetAdmin())
             {
-                return "Telnet";
+                return "STA/TCA";
             }
             else
             {
-                return "Super";
+                return "SA";
             }
         }
-        return "";
+        return "Op";
     }
 
     public String getColumnValue(int columnIndex)

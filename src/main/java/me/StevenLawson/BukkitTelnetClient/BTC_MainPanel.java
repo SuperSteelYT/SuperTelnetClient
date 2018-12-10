@@ -498,11 +498,24 @@ public class BTC_MainPanel extends javax.swing.JFrame
         favoriteButtonsPanelHolder = new javax.swing.JPanel();
         favoriteButtonsPanelScroll = new javax.swing.JScrollPane();
         favoriteButtonsPanel = new BTC_FavoriteButtonsPanel(favButtonList);
+        jPanel5 = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("BukkitTelnetClient");
 
+        splitPane.setBackground(new java.awt.Color(45, 43, 45));
+        splitPane.setDividerSize(0);
         splitPane.setResizeWeight(1.0);
+
+        jPanel3.setBackground(new java.awt.Color(45, 43, 45));
 
         mainOutput.setEditable(false);
         mainOutput.setBackground(new java.awt.Color(80, 82, 86));
@@ -532,11 +545,23 @@ public class BTC_MainPanel extends javax.swing.JFrame
             }
         });
 
+        txtServer.setBackground(new java.awt.Color(80, 82, 86));
         txtServer.setEditable(true);
 
+        chkAutoScroll.setBackground(new java.awt.Color(45, 43, 45));
+        chkAutoScroll.setForeground(new java.awt.Color(255, 255, 255));
         chkAutoScroll.setSelected(true);
         chkAutoScroll.setText("AutoScroll");
+        chkAutoScroll.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                chkAutoScrollActionPerformed(evt);
+            }
+        });
 
+        txtCommand.setBackground(new java.awt.Color(80, 82, 86));
+        txtCommand.setForeground(new java.awt.Color(255, 255, 255));
         txtCommand.setEnabled(false);
         txtCommand.addKeyListener(new java.awt.event.KeyAdapter()
         {
@@ -555,8 +580,10 @@ public class BTC_MainPanel extends javax.swing.JFrame
             }
         });
 
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Command:");
 
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Server:");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -574,7 +601,7 @@ public class BTC_MainPanel extends javax.swing.JFrame
                         .addGap(18, 18, 18)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txtCommand)
-                            .addComponent(txtServer, 0, 431, Short.MAX_VALUE))
+                            .addComponent(txtServer, 0, 390, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(btnConnect, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -592,7 +619,7 @@ public class BTC_MainPanel extends javax.swing.JFrame
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(mainOutputScoll, javax.swing.GroupLayout.DEFAULT_SIZE, 365, Short.MAX_VALUE)
+                .addComponent(mainOutputScoll, javax.swing.GroupLayout.PREFERRED_SIZE, 365, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtCommand, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -610,14 +637,32 @@ public class BTC_MainPanel extends javax.swing.JFrame
 
         splitPane.setLeftComponent(jPanel3);
 
+        jTabbedPane1.setBackground(new java.awt.Color(45, 43, 45));
+
+        jPanel2.setBackground(new java.awt.Color(80, 82, 86));
+
         tblPlayers.setAutoCreateRowSorter(true);
+        tblPlayers.setBackground(new java.awt.Color(240, 240, 240));
+        tblPlayers.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         tblPlayers.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         tblPlayersScroll.setViewportView(tblPlayers);
         tblPlayers.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
 
-        jLabel3.setText("# Players:");
+        jLabel3.setBackground(new java.awt.Color(80, 82, 86));
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("Player Count:");
 
         txtNumPlayers.setEditable(false);
+        txtNumPlayers.setBackground(new java.awt.Color(80, 82, 86));
+        txtNumPlayers.setForeground(new java.awt.Color(255, 255, 255));
+        txtNumPlayers.setBorder(null);
+        txtNumPlayers.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                txtNumPlayersActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -626,19 +671,18 @@ public class BTC_MainPanel extends javax.swing.JFrame
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(tblPlayersScroll, javax.swing.GroupLayout.DEFAULT_SIZE, 293, Short.MAX_VALUE)
+                    .addComponent(tblPlayersScroll, javax.swing.GroupLayout.PREFERRED_SIZE, 278, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(txtNumPlayers, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtNumPlayers, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(tblPlayersScroll, javax.swing.GroupLayout.DEFAULT_SIZE, 369, Short.MAX_VALUE)
+                .addComponent(tblPlayersScroll, javax.swing.GroupLayout.DEFAULT_SIZE, 375, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
@@ -646,14 +690,22 @@ public class BTC_MainPanel extends javax.swing.JFrame
                 .addContainerGap())
         );
 
-        jTabbedPane1.addTab("Player List", jPanel2);
+        jTabbedPane1.addTab("Player Info", jPanel2);
 
+        jPanel1.setBackground(new java.awt.Color(80, 82, 86));
+
+        chkIgnorePlayerCommands.setBackground(new java.awt.Color(80, 82, 86));
+        chkIgnorePlayerCommands.setForeground(new java.awt.Color(255, 255, 255));
         chkIgnorePlayerCommands.setSelected(true);
         chkIgnorePlayerCommands.setText("Ignore \"[PLAYER_COMMAND]\" messages");
 
+        chkIgnoreServerCommands.setBackground(new java.awt.Color(80, 82, 86));
+        chkIgnoreServerCommands.setForeground(new java.awt.Color(255, 255, 255));
         chkIgnoreServerCommands.setSelected(true);
         chkIgnoreServerCommands.setText("Ignore \"issued server command\" messages");
 
+        chkShowChatOnly.setBackground(new java.awt.Color(80, 82, 86));
+        chkShowChatOnly.setForeground(new java.awt.Color(255, 255, 255));
         chkShowChatOnly.setText("Show chat only");
         chkShowChatOnly.addActionListener(new java.awt.event.ActionListener()
         {
@@ -663,6 +715,8 @@ public class BTC_MainPanel extends javax.swing.JFrame
             }
         });
 
+        chkIgnoreErrors.setBackground(new java.awt.Color(80, 82, 86));
+        chkIgnoreErrors.setForeground(new java.awt.Color(255, 255, 255));
         chkIgnoreErrors.setText("Ignore warnings and errors");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -676,7 +730,7 @@ public class BTC_MainPanel extends javax.swing.JFrame
                     .addComponent(chkIgnoreServerCommands)
                     .addComponent(chkShowChatOnly)
                     .addComponent(chkIgnoreErrors))
-                .addContainerGap(76, Short.MAX_VALUE))
+                .addContainerGap(61, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -694,10 +748,13 @@ public class BTC_MainPanel extends javax.swing.JFrame
 
         jTabbedPane1.addTab("Filters", jPanel1);
 
+        jPanel4.setBackground(new java.awt.Color(80, 82, 86));
+
         favoriteButtonsPanelHolder.setLayout(new java.awt.BorderLayout());
 
         favoriteButtonsPanelScroll.setBorder(null);
 
+        favoriteButtonsPanel.setBackground(new java.awt.Color(80, 82, 86));
         favoriteButtonsPanel.setLayout(null);
         favoriteButtonsPanelScroll.setViewportView(favoriteButtonsPanel);
 
@@ -709,7 +766,7 @@ public class BTC_MainPanel extends javax.swing.JFrame
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addGap(0, 0, 0)
-                .addComponent(favoriteButtonsPanelHolder, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(favoriteButtonsPanelHolder, javax.swing.GroupLayout.DEFAULT_SIZE, 298, Short.MAX_VALUE)
                 .addGap(0, 0, 0))
         );
         jPanel4Layout.setVerticalGroup(
@@ -720,9 +777,77 @@ public class BTC_MainPanel extends javax.swing.JFrame
                 .addContainerGap())
         );
 
-        jTabbedPane1.addTab("Commands", jPanel4);
+        jTabbedPane1.addTab("Button Commands", jPanel4);
+
+        jPanel5.setBackground(new java.awt.Color(80, 82, 86));
+
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("SuperTelnetClient v1.0");
+
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("Created by Super_");
+
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setText("FreedomTelnetClient v2.0.06");
+
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setText("Created by Steven Lawson (Madgeek1450)");
+
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setText("Disclaimer:");
+
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setText("The SuperTelnetClient is simply a modification of the");
+
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel10.setText("original FreedomTelnetClient and should only be treated");
+
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel11.setText("as such regardless of its state or form.");
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel4)
+                    .addComponent(jLabel5)
+                    .addComponent(jLabel6)
+                    .addComponent(jLabel7)
+                    .addComponent(jLabel8)
+                    .addComponent(jLabel9)
+                    .addComponent(jLabel10)
+                    .addComponent(jLabel11))
+                .addContainerGap(20, Short.MAX_VALUE))
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(jLabel4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel5)
+                .addGap(36, 36, 36)
+                .addComponent(jLabel6)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel7)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 201, Short.MAX_VALUE)
+                .addComponent(jLabel8)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel9)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel10)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel11)
+                .addContainerGap())
+        );
+
+        jTabbedPane1.addTab("About", jPanel5);
 
         splitPane.setRightComponent(jTabbedPane1);
+        jTabbedPane1.getAccessibleContext().setAccessibleDescription("");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -785,12 +910,22 @@ public class BTC_MainPanel extends javax.swing.JFrame
         txtCommand.selectAll();
     }//GEN-LAST:event_btnSendActionPerformed
 
+    private void chkAutoScrollActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_chkAutoScrollActionPerformed
+    {//GEN-HEADEREND:event_chkAutoScrollActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_chkAutoScrollActionPerformed
+
     private void chkShowChatOnlyActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_chkShowChatOnlyActionPerformed
     {//GEN-HEADEREND:event_chkShowChatOnlyActionPerformed
         boolean enable = !chkShowChatOnly.isSelected();
         chkIgnorePlayerCommands.setEnabled(enable);
         chkIgnoreServerCommands.setEnabled(enable);
     }//GEN-LAST:event_chkShowChatOnlyActionPerformed
+
+    private void txtNumPlayersActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_txtNumPlayersActionPerformed
+    {//GEN-HEADEREND:event_txtNumPlayersActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNumPlayersActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnConnect;
@@ -805,12 +940,21 @@ public class BTC_MainPanel extends javax.swing.JFrame
     private javax.swing.JPanel favoriteButtonsPanelHolder;
     private javax.swing.JScrollPane favoriteButtonsPanelScroll;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTextPane mainOutput;
     private javax.swing.JScrollPane mainOutputScoll;

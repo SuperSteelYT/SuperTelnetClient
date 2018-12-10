@@ -31,6 +31,7 @@ import org.apache.commons.net.telnet.TelnetClient;
 
 public class BTC_ConnectionManager
 {
+    private static final Color RED = new Color(204, 116, 116);
     private static final Pattern LOGIN_MESSAGE = Pattern.compile("\\[.+?@BukkitTelnet\\]\\$ Logged in as (.+)\\.");
 
     private final TelnetClient telnetClient = new TelnetClient();
@@ -52,7 +53,7 @@ public class BTC_ConnectionManager
         btc.getTxtServer().setEnabled(false);
         btc.getBtnDisconnect().setEnabled(true);
 
-        btc.writeToConsole(new BTC_ConsoleMessage("Connecting to " + hostname + ":" + port + "...", Color.RED));
+        btc.writeToConsole(new BTC_ConsoleMessage("Connecting to " + hostname + ":" + port + "...", RED));
 
         this.hostname = hostname;
         this.port = port;
@@ -117,7 +118,7 @@ public class BTC_ConnectionManager
 
         updateTitle(false);
 
-        btc.writeToConsole(new BTC_ConsoleMessage("Disconnected.", Color.RED));
+        btc.writeToConsole(new BTC_ConsoleMessage("Disconnected.", RED));
     }
 
     public void sendCommand(final String text)
