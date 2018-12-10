@@ -256,16 +256,16 @@ public class BTC_ConnectionManager
         {
             if (loginName == null)
             {
-                title = String.format("SuperiorTelnetClient %s // %s:%d", BukkitTelnetClient.VERSION_STRING, hostname, port);
+                title = String.format("SuperTelnetClient %s // %s:%d", BukkitTelnetClient.VERSION_STRING, hostname, port);
             }
             else
             {
-                title = String.format("SuperiorTelnetClient %s // %s@%s:%d", BukkitTelnetClient.VERSION_STRING, loginName, hostname, port);
+                title = String.format("SuperTelnetClient %s // %s@%s:%d", BukkitTelnetClient.VERSION_STRING, loginName, hostname, port);
             }
         }
         else
         {
-            title = String.format("SuperiorTelnetClient %s // Idle", BukkitTelnetClient.VERSION_STRING);
+            title = String.format("SuperTelnetClient %s // Idle", BukkitTelnetClient.VERSION_STRING);
         }
 
         mainPanel.setTitle(title);
