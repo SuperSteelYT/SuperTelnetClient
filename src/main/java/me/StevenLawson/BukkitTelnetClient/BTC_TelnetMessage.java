@@ -25,7 +25,7 @@ public class BTC_TelnetMessage extends BTC_ConsoleMessage
 {
     private static final String PATTERN_PREFIX = "^:\\[.+? INFO\\]: ";
     private static final Color PURPLE = new Color(204, 116, 198);
-    private static final Color DARK_GREEN = new Color(86, 130, 3);
+    private static final Color DARK_GREEN = new Color(116, 204, 117);
     private static final Color RED = new Color(204, 116, 116);
 
     private static final Pattern ERROR_MESSAGE = Pattern.compile("^:\\[.+? (?:(WARN)|(ERROR))\\]: ");
